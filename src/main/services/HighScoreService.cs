@@ -9,9 +9,12 @@ namespace GuessingGame.services
 {
     public class HighScoreService : IHighScoreService
     {
+        #region Private Memebers
+
         private readonly string _highScoreFilePath;
-        
-        private List<HighScoreModel> _highScores = new List<HighScoreModel>();
+        private List<HighScoreModel> _highScores = new();
+
+        #endregion
 
         #region Contructors
         public HighScoreService() : this("highscore.txt")

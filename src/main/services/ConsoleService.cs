@@ -10,10 +10,16 @@ namespace GuessingGame.services
     {
         private readonly IHighScoreService _highScoreService;
 
+        #region Contructor
+
         public ConsoleService(IHighScoreService highScoreService)
         {
             _highScoreService = highScoreService;
         }
+
+        #endregion
+
+        #region Public Methods
 
         public object PromptForInput(string prompt, Type type = null)
         {
@@ -90,5 +96,7 @@ namespace GuessingGame.services
             var yesOrNo = Console.ReadLine()?.ToLower();
             return yesOrNo is "y";
         }
+
+        #endregion
     }
 }

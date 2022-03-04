@@ -8,19 +8,25 @@ namespace GuessingGame
 {
     public class Game
     {
+        #region Private Propeties
+
         private readonly IConsoleService _consoleService;
         private readonly IHighScoreService _highScoreService;
 
         private int _number;
-        private int _turns = 0;
+        private int _turns;
 
-        private readonly List<PlayerModel> _players = new List<PlayerModel>();
+        private readonly List<PlayerModel> _players = new();
+
+        #endregion
 
         public Game(IConsoleService consoleService, IHighScoreService highScoreService)
         {
             _consoleService = consoleService;
             _highScoreService = highScoreService;
         }
+
+        #region Public Methods
 
         public void Start()
         {
@@ -70,6 +76,10 @@ namespace GuessingGame
                 }
             }
         }
+
+        #endregion
+
+        #region Private Methods
 
         private void ClearAllResults()
         {
@@ -137,5 +147,7 @@ namespace GuessingGame
             var rand = new Random();
             _number = rand.Next(10);
         }
+
+        #endregion
     }
 }
