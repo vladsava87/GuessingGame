@@ -1,0 +1,3 @@
+rick:1
+vlad:1
+morty:4
