@@ -27,6 +27,8 @@ namespace GuessingGame
             _consoleService.ShowInstructions();
 
             var numberOfPLayers = (int) _consoleService.PromptForInput("Enter number of players? ", typeof(int));
+            
+            _turns = (int) _consoleService.PromptForInput("Enter number of turns?", typeof(int));
 
             for (var i = 1; i <= numberOfPLayers; i++)
             {
@@ -34,9 +36,7 @@ namespace GuessingGame
                 _consoleService.MessageText($"Welcome {playerName}\n");
                 _players.Add(new PlayerModel(playerName));
             }
-
-            _turns = (int) _consoleService.PromptForInput("Enter number of turns?", typeof(int));
-
+            
             while (true)
             {
 
@@ -49,6 +49,7 @@ namespace GuessingGame
                 }
                 else
                 {
+                    _consoleService.MessageText($"My number was: {_number}!");
                     // for no winners calculate the "winner"
                     // being the closest person to the result
                 }
