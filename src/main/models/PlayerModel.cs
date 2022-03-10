@@ -14,11 +14,5 @@ namespace GuessingGame.models
             PlayerName = playerName;
             Guesses = new List<int>();
         }
-        
-        public PlayerModel(string playerName, int g)
-        {
-            PlayerName = playerName;
-            Guesses = new List<int>();
-        }
     }
 }

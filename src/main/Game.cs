@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Input;
 using GuessingGame.interfaces;
 using GuessingGame.models;
 
@@ -10,7 +11,7 @@ namespace GuessingGame
     {
         #region Private Propeties
 
-        private readonly IConsoleService _consoleService;
+        private readonly IInputOutputService _consoleService;
         private readonly IHighScoreService _highScoreService;
 
         private int _number;
@@ -20,7 +21,7 @@ namespace GuessingGame
 
         #endregion
 
-        public Game(IConsoleService consoleService, IHighScoreService highScoreService)
+        public Game(IInputOutputService consoleService, IHighScoreService highScoreService)
         {
             _consoleService = consoleService;
             _highScoreService = highScoreService;
@@ -145,7 +146,7 @@ namespace GuessingGame
         private void ThinkOfNumber()
         {
             var rand = new Random();
-            _number = rand.Next(10);
+            _number = rand.Next(1000);
         }
 
         #endregion

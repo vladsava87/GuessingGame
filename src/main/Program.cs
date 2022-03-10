@@ -19,7 +19,7 @@ namespace GuessingGame
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddSingleton<IHighScoreService, HighScoreService>();
-                    services.AddSingleton<IConsoleService, ConsoleService>();
+                    services.AddSingleton<IInputOutputService, ConsoleService>();
 
                     services.AddTransient<Game>();
                 });

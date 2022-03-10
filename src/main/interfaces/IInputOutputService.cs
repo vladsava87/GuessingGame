@@ -3,7 +3,7 @@ using GuessingGame.models;
 
 namespace GuessingGame.interfaces
 {
-    public interface IConsoleService
+    public interface IInputOutputService
     { 
         object PromptForInput(string prompt, Type type = null);
         public void ShowInstructions();

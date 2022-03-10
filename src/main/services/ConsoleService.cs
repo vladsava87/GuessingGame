@@ -6,7 +6,7 @@ using GuessingGame.models;
 
 namespace GuessingGame.services
 {
-    public class ConsoleService : IConsoleService
+    public class ConsoleService : IInputOutputService
     {
         private readonly IHighScoreService _highScoreService;
 
